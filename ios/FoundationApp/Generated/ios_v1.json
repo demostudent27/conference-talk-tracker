@@ -1,0 +1,40 @@
+{
+  "settings": {
+    "schema_version": 1
+  },
+  "rules": [
+    {
+      "patterns": [
+        ".*"
+      ],
+      "properties": {
+        "context": "default",
+        "pull_to_refresh_enabled": true
+      }
+    },
+    {
+      "patterns": [
+        "^/speakers$"
+      ],
+      "properties": {
+        "presentation": "replace_root"
+      }
+    },
+    {
+      "patterns": [
+        "^/conferences$"
+      ],
+      "properties": {
+        "presentation": "replace_root"
+      }
+    },
+    {
+      "patterns": [
+        "^/talks$"
+      ],
+      "properties": {
+        "presentation": "replace_root"
+      }
+    }
+  ]
+}

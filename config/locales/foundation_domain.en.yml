@@ -1,0 +1,66 @@
+---
+en:
+  foundation_domain:
+    navigation:
+      label: "Primary navigation"
+    pagination:
+      label: "Pagination"
+      empty:
+        heading: "That page is empty"
+        body: "Choose another page to keep browsing this collection."
+        action: "Back to the first page"
+    form:
+      errors:
+        heading: "Please correct the highlighted fields"
+      cancel: "Cancel"
+    entities:
+      "speakers":
+        index:
+          title: "Speakers"
+          heading: "Speakers"
+          lede: "Browse this read-only collection by its primary descriptor."
+          caption: "Speakers primary descriptors"
+          descriptor_label: "Name"
+        empty:
+          heading: "No records yet"
+          body: "This collection does not have any records to show yet."
+      "conferences":
+        index:
+          title: "Conferences"
+          heading: "Conferences"
+          lede: "Browse, open, add, edit, and delete this collection by its primary descriptor."
+          caption: "Conferences primary descriptors"
+          descriptor_label: "Name"
+          actions: "Actions"
+        empty:
+          heading: "No records yet"
+          body: "This collection does not have any records to show yet."
+        fields:
+          "name": "Name"
+          "venue": "Venue"
+          "held_on": "Held On"
+        show:
+          title: "%{descriptor}"
+          unnamed: "Conference #%{id}"
+          back: "Back to Conferences"
+        new:
+          title: "New Conference"
+          heading: "New Conference"
+          action: "Add Conference"
+        edit:
+          title: "Edit Conference"
+          heading: "Edit Conference"
+          action: "Edit"
+        destroy:
+          action: "Delete"
+          confirm: "Delete this Conference?"
+      "talks":
+        index:
+          title: "Talks"
+          heading: "Talks"
+          lede: "Browse this read-only collection by its primary descriptor."
+          caption: "Talks primary descriptors"
+          descriptor_label: "Title"
+        empty:
+          heading: "No records yet"
+          body: "This collection does not have any records to show yet."

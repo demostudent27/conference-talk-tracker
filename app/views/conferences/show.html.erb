@@ -1,0 +1,33 @@
+<% descriptor = @conference.name.presence || t("foundation_domain.entities.conferences.show.unnamed", id: @conference.id) %>
+<% content_for :title, t("foundation_domain.entities.conferences.show.title", descriptor: descriptor) %>
+
+<section class="mx-auto max-w-2xl py-10 sm:py-14">
+  <header class="mb-8">
+    <p class="text-sm font-medium text-primary"><%= t("app_name") %></p>
+    <h1 class="mt-1 text-2xl font-bold tracking-tight sm:text-3xl"><%= descriptor %></h1>
+  </header>
+
+    <dl class="mb-8 grid gap-6 sm:grid-cols-2">
+      <div>
+        <dt class="text-sm font-medium text-base-content/70"><%= I18n.t("foundation_domain.entities.conferences.fields.name") %></dt>
+        <dd class="mt-1 whitespace-pre-wrap break-words"><%= @conference.name %></dd>
+      </div>
+      <div>
+        <dt class="text-sm font-medium text-base-content/70"><%= I18n.t("foundation_domain.entities.conferences.fields.held_on") %></dt>
+        <dd class="mt-1 whitespace-pre-wrap break-words"><%= @conference.held_on %></dd>
+      </div>
+      <div>
+        <dt class="text-sm font-medium text-base-content/70"><%= I18n.t("foundation_domain.entities.conferences.fields.venue") %></dt>
+        <dd class="mt-1 whitespace-pre-wrap break-words"><%= @conference.venue %></dd>
+      </div>
+    </dl>
+
+  <div class="flex items-center gap-3">
+    <%= link_to t("foundation_domain.entities.conferences.show.back"), conferences_path, class: "btn btn-ghost" %>
+    <%= link_to t("foundation_domain.entities.conferences.edit.action"), edit_conference_path(@conference, return_to: conference_path(@conference)),
+      class: "btn btn-primary" %>
+    <%= button_to t("foundation_domain.entities.conferences.destroy.action"), conference_path(@conference),
+      method: :delete, params: {return_to: conferences_path}, class: "btn btn-error btn-outline",
+      form: {data: {turbo_confirm: t("foundation_domain.entities.conferences.destroy.confirm")}} %>
+  </div>
+</section>

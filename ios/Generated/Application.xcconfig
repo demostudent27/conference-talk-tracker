@@ -1,0 +1,6 @@
+APP_DISPLAY_NAME = $()Conference Talk Tracker$()
+APP_BUNDLE_IDENTIFIER = com.example.conference-talk-tracker.conference-talk-tracker
+MARKETING_VERSION = 1.0
+CURRENT_PROJECT_VERSION = 1
+RAILS_ORIGIN = https:/$()/conference-talk-tracker.example.com
+FOUNDATION_PLAN_SHA256 = 1b8d2b37b04b4ea1762a5b7710f55c653d832679f9bc096264c3a04ce3eb08ae

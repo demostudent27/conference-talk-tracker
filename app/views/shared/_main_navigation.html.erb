@@ -1,0 +1,19 @@
+<nav aria-label="<%= t("foundation_domain.navigation.label") %>">
+  <ul class="menu menu-horizontal gap-1 px-1">
+    <li>
+      <%= link_to t("foundation_domain.entities.speakers.index.heading"), speakers_path,
+        class: "btn btn-ghost btn-sm",
+        aria: {current: ("page" if controller_name == "speakers")} %>
+    </li>
+    <li>
+      <%= link_to t("foundation_domain.entities.conferences.index.heading"), conferences_path,
+        class: "btn btn-ghost btn-sm",
+        aria: {current: ("page" if controller_name == "conferences")} %>
+    </li>
+    <li>
+      <%= link_to t("foundation_domain.entities.talks.index.heading"), talks_path,
+        class: "btn btn-ghost btn-sm",
+        aria: {current: ("page" if controller_name == "talks")} %>
+    </li>
+  </ul>
+</nav>
